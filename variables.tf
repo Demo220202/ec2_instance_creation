@@ -19,7 +19,12 @@ variable "security_group" {
 }
 
 variable "iam_role" {
-  description = "IAM Role to be assigned"
+  description = "IAM Role Name"
+  type        = string
+}
+
+variable "iam_instance_profile" {
+  description = "IAM Instance Profile Name"
   type        = string
 }
 
