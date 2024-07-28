@@ -17,10 +17,9 @@ resource "aws_instance" "example" {
   }
 
   vpc_security_group_ids = [var.security_group]
-  iam_instance_profile   = aws_iam_instance_profile.example.name
+  iam_instance_profile   = data.aws_iam_instance_profile.existing.name
 }
 
-resource "aws_iam_instance_profile" "example" {
+data "aws_iam_instance_profile" "existing" {
   name = var.iam_instance_profile
-  role = var.iam_role
 }
