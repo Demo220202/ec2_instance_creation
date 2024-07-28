@@ -18,11 +18,6 @@ variable "security_group" {
   type        = string
 }
 
-variable "iam_role" {
-  description = "IAM Role Name"
-  type        = string
-}
-
 variable "iam_instance_profile" {
   description = "IAM Instance Profile Name"
   type        = string
