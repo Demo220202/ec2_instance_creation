@@ -2,19 +2,6 @@ provider "aws" {
   region = var.region
 }
 
-variable "region" {}
-variable "instance_type" {}
-variable "storage" {}
-variable "security_group" {}
-variable "iam_role" {}
-variable "iam_instance_profile" {}
-variable "key_pair" {}
-variable "vpc_id" {}
-variable "ami_id" {}
-variable "instance_name" {}
-variable "additional_tag_name" {}
-variable "additional_tag_value" {}
-
 resource "aws_instance" "example" {
   ami           = var.ami_id
   instance_type = var.instance_type
